@@ -1,53 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar Navigasi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: beige;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        header {
-            background-color: rgb(196, 224, 255);
-            padding: 10px 0;
-            text-align: center;
-        
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f3f2e9, #d1e3f8);
+    }
 
-        header a {
-            color: rgb(106, 134, 255);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+    header {
+      background-color: rgba(205, 227, 255, 0.7); /* translucent blue */
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      animation: pop-in 0.6s ease-out;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px); /* glassy effect */
+    }
 
-        header a:hover {
-            color: rgb(117, 166, 209);
-        }
+    header a {
+      color: #5a7dd4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 36px;
-            color: rgb(144, 155, 206);
-        }
-    </style>
+    header a::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: #5a7dd4;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    header a:hover {
+      color: #84a3d9;
+    }
+
+    header a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 40px;
+      color: #6d89c7;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+      animation: pop-in 0.6s ease-out;
+    }
+
+    .centered-img {
+      display: block;
+      margin: 30px auto;
+      border-radius: 20px;
+      max-width: 90%;
+      height: auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      animation: float-up-down 3s ease-in-out infinite, pop-in 0.6s ease-out;
+    }
+
+    @keyframes float-up-down {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .curved-box {
+      background-color: #eef5fc;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 850px;
+      margin: 40px auto;
+      color: #3e4c61;
+      font-size: 17px;
+      line-height: 1.7;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      animation: pop-in 0.6s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes pop-in {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .curved-box {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      .centered-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index.html">Home</a>
-        <a href="agama.html">Agama</a>
-        <a href="pkn.html">PKn</a>
-        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
-    </header>
 
-    <h1>Ini adalah halaman Home</h1>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="agama.html">Agama</a>
+    <a href="pendidikanpancasila.html">Pendidikan Pancasila</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="english.html">English</a>
+    <a href="ips.html">IPS</a>
+    <a href="mandarin.html">Mandarin</a>
+  </header>
+
+  <h1>Home Page</h1>
+
+  <img src="taiwna.jpg" width="600" height="400" class="centered-img" />
+
+  <div class="curved-box">
+    <p>Selamat datang di halaman Home!</p>
+    <p>Ini adalah pusat dari semua halaman tugas-tugas kamu, dan dari sini kamu bisa akses semua mata pelajaran lainnya seperti Agama, Bahasa Indonesia, Pendidikan Pancasila, English, IPS, dan Mandarin.</p>
+  </div>
+
 </body>
 </html>

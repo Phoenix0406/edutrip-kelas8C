@@ -1,61 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bar Navigasi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agama</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(214, 171, 132);
-        }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e8dbf4, #c9a7f5);
+      animation: fadeIn 1.2s ease-in;
+      scroll-behavior: smooth;
+    }
 
-        header {
-            background-color: rgb(117, 77, 50);
-            padding: 10px 0;
-            text-align: center;
-        
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        header a {
-            color: rgb(255, 196, 118);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
 
-        header a:hover {
-            color: rgb(177, 147, 109);
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(211, 181, 243, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 36px;
-            color: rgb(117, 92, 68);
-        }
-    </style>
+    header a {
+      color: #6f38c5;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 17px;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    header a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #6f38c5;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header a:hover {
+      color: #fff0d3;
+    }
+
+    header a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 40px;
+      color: #6a2dad;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .curved-box {
+      background: #f9f3fd;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 900px;
+      margin: 40px auto;
+      color: #4c396b;
+      font-size: 17px;
+      line-height: 1.7;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    strong {
+      color: #6a2dad;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .church-img,
+    .kerjasama-img {
+      border-radius: 25px;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .church-img {
+      width: 200px;
+      height: 300px;
+    }
+
+    .kerjasama-img {
+      width: 300px;
+      height: 200px;
+    }
+
+    .church-img:hover,
+    .kerjasama-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (max-width: 768px) {
+      .church-img,
+      .kerjasama-img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index.html">Home</a>
-        <a href="agama.html">Agama</a>
-        <a href="pkn.html">PKn</a>
-        <a href="bahasaindonesia.html">Bahasa Indonesia</a>
-    </header>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="agama.html">Agama</a>
+    <a href="pendidikanpancasila.html">Pendidikan Pancasila</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="english.html">English</a>
+    <a href="ips.html">IPS</a>
+    <a href="mandarin.html">Mandarin</a>
+  </header>
 
-    <h1>Ini adalah halaman Agama</h1>
-    <table border="5px">
-        <tr>
-            <th>Dalam pelajaran Agama saya belajar tentang Yesus dan lain-lain. </th>
-        </tr>
-        <tr>
-            <img src="https://cdn.mos.cms.futurecdn.net/ybU2RY4aNU75Q3T8tj9Xff-1200-80.jpg" width="600" height="400">
-        </tr>
-    </table>
+  <h1 data-aos="fade-down">AGAMA</h1>
+
+  <div class="image-row" data-aos="zoom-in">
+    <img src="holyfamilychurch1.png" alt="Gambar Holy Family" class="church-img">
+    <img src="holyfamilychurch2.png" alt="Gambar Holy Family" class="church-img">
+    <img src="holyfamilychurch3.png" alt="Gambar Holy Family" class="church-img">
+  </div>
+
+  <div class="curved-box" data-aos="fade-up">
+    <p><strong>Tugas Agama Taipei Holy Family Church:</strong></p>
+    <p>1. Amatilah bangunan Gereja yang kamu kunjungi, apakah keunikan bangunan gereja yang kamu kunjungi?</p>
+    <p>Keunikan bangunan gereja yang saya kunjungi adalah gerejanya memiliki altar yang lumayan luas dan struktur bangunan yang luas dan tinggi.</p>
+    <p>2. Ceritakanlah sejarah yang ada di Gereja yang kamu kunjungi!</p>
+    <p>Gereja Holy Family ditemu pada tahun 1953. Gereja ini sudah pernah berpindah tempat dan sudah berdiri selama 72 tahun.</p>
+    <p>3. Perbedaan apa yang kamu temukan di Gereja yang kamu kunjungi dibandingkan dengan Gereja Santo Laurensius!</p>
+    <p>Altar di Gereja Holy Family lebih luas dan besar dibandingkan dengan altar yang berada di Gereja Santo Laurensius.</p>
+  </div>
+
+  <div class="image-row" data-aos="zoom-in-up">
+    <img src="kerjasama2.png" alt="Gambar Kerjasama" class="kerjasama-img">
+    <img src="kerjasama3.png" alt="Gambar Kerjasama" class="kerjasama-img">
+    <img src="kerjasama1.png" alt="Gambar Kerjasama" class="kerjasama-img">
+  </div>
+
+  <div class="curved-box" data-aos="fade-up">
+    <p><strong>Tugas Agama Refleksi Community Service:</strong></p>
+    <p>1. Ceritakan kegiatan CS yang kalian lakukan [kepada siapa kamu melakukan, apa tujuan kamu melakukan, bagaimana cara kamu melaksanakan]</p>
+    <p>Kami melakukan kegiatan CS kepada orang yang bekerja di sana dan juga untuk dunia. Tujuan kami untuk melakukan CS adalah untuk membantu dunia menjadi tempat yang lebih bersih. Saya melaksanakan dengan cara membantu membersihkan sampah-sampahnya.</p>
+    <p>2. Evaluasi CS [apakah tujuan kegiatan ini tercapai, bagaimana tanggapan orang-orang yang menjadi sasaran kegiatanmu]</p>
+    <p>Tujuan kegiatan ini tercapai karena kami sudah membantu dan mulai membuat dunia menjadi tempat yang bersih dan nyaman.</p>
+    <p>3. Refleksi atas kegiatan CS : Sebagai murid Kristus, kita harus menyangkal diri, memanggul salib dan mengikuti Yesus.</p>
+    <p>a. Jelaskan bahwa kegiatan CS ini menurutmu merupakan pelaksanaan sebagai murid Yesus yang menyangkal diri.</p>
+    <p>Dengan melakukan kegiatan ini, kita belajar untuk mengutamakan kepentingan orang lain terlebih dahulu dengan mengorbankan tenaga kami demi membantu orang lain seperti yang Yesus ajarkan tentang menyangkal diri.</p>
+    <p>b. Jelaskan bahwa kegiatan CS ini menurutmu merupakan pelaksanaan sebagai murid Yesus yang memanggul salib.</p>
+    <p>Kegiatan CS ini ada kesulitan namun, sebagai murid Yesus, kami diajarkan untuk tetap harus menjalankannya dengan tulus hati seperti Yesus yang memanggul salib dengan penuh kasih.</p>
+    <p>c. Jelaskan bahwa kegiatan CS ini merupakan pelaksanaan sebagai murid Yesus yang mengikuti Yesus!</p>
+    <p>Kegiatan ini merupakan pelaksanaan sebagai murid Yesus yang mengikuti Yesus karena dengan membantu orang lain, kita tidak hanya berbuat baik tetapi juga menunjukkan nilai-nilai Kristiani sehingga kita benar-benar mengikuti Yesus.</p>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>

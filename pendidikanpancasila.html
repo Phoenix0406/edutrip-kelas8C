@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendidikan Pancasila</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Include AOS CSS -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f0ead6, #d3ccb0);
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(142, 151, 117, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header a {
+      position: relative;
+      color: #fffaf0;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 17px;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    header a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #d2b48c;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    header a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    header a:hover {
+      color: #f1e0c6;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 40px;
+      color: #5c4b2f;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .curved-box {
+      background-color: #fdfaf3;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 850px;
+      margin: 40px auto;
+      color: #4e4739;
+      font-size: 17px;
+      line-height: 1.7;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 1.3s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .curved-img {
+      display: block;
+      margin: 40px auto;
+      border-radius: 25px;
+      width: 60%;
+      height: auto;
+      animation: float 5s ease-in-out infinite;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .curved-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .image-row img {
+      border-radius: 25px;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    strong {
+      color: #8e5a2c;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #b2a68d;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #c6b89e;
+      color: #3c3c3c;
+    }
+
+    td {
+      background-color: #f3efe3;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .curved-box {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      .curved-img {
+        width: 85%;
+      }
+
+      .image-row img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="agama.html">Agama</a>
+    <a href="pendidikanpancasila.html">Pendidikan Pancasila</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="english.html">English</a>
+    <a href="ips.html">IPS</a>
+    <a href="mandarin.html">Mandarin</a>
+  </header>
+
+  <h1 data-aos="fade-up">PENDIDIKAN PANCASILA</h1>
+
+  <div class="image-row" data-aos="fade-left">
+    <img src="chiangkaishek1.png" alt="Chiang Kai Shek">
+    <img src="chiangkaishek2.png" alt="Chiang Kai Shek">
+    <img src="chiangkaishek3.png" alt="Chiang Kai Shek">
+  </div>
+
+  <div class="curved-box" data-aos="fade-up">
+    <p><strong>Chiang Kai Shek Memorial Hall:</strong></p>
+    <p>1. Apa fungsi Chiang Kai-Shek memorial hall di masa lalu dan masa sekarang?</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Masa Lalu</th>
+          <th>Masa Sekarang</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kantor Chiang Kai Shek</td>
+          <td>Tempat Wisata</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Tempat Protes (tahun 2020-an)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>2. Bagaimana peran Chiang Kai-Shek dalam membentuk Taiwan sebagai negara modern? Apa warisan politik dan budayanya yang berkontribusi pada semangat nasionalisme Taiwan?</p>
+    <p>Memberikan identitas kepada warga Taiwan, membuat mereka merasa bahwa mereka memiliki negara sendiri.</p>
+    <p>3. Bagaimana Chiang Kai-Shek dan rezim Kuomintangnya berusaha membangun persatuan dan identitas nasional di Taiwan? Bagaimana pengaruh ini masih terasa hari ini?</p>
+    <p>Mempengaruhi hukum militer dalam menjaga stabilitas dan mencegah dari komunis.</p>
+    <p>4. Bagaimana National Palace Museum berperan dalam pendidikan sejarah dan membangun semangat nasionalisme di kalangan generasi muda Taiwan? Apa pendekatan yang diambil dalam mengajarkan sejarah dan budaya nasional?</p>
+    <p>Memiliki rasa kebanggaan kepada bahasa mandarin tradisional dan budaya mereka sendiri.</p>
+  </div>
+
+  <img src="nationalpalace1.png" alt="National Palace Museum" class="curved-img" data-aos="fade-up">
+
+  <div class="curved-box" data-aos="fade-up">
+    <p><strong>National Palace Museum:</strong></p>
+    <p>1. Bagaimana sejarah awal dibangunnya National Palace Museum? Apa tujuan dibangunnya museum ini?</p>
+    <p>Museum ini dibangun untuk menyimpan seni & artefak berharga dari Istana Kekaisaran Tiongkok. Koleksi ini awalnya berasal dari kota Terlarang di Beijing dan dipindahkan ke Taiwan selama perang saudara Tiongkok.</p>
+    <p>2. Pilih satu artefak di National Palace Museum dan jelaskan apa yang artefak tersebut ungkapkan tentang kehidupan masyarakat pada zamannya!</p>
+    <p>Salah satu artefak yang saya temukan adalah patung bayi. Artefak ini adalah patung bayi yang terbaring. Artefak ini berasal dari dinasti Qing, Song, dan Ming. Biasanya artefak ini digunakan untuk bantal tidur.</p>
+    <p>3. Lakukan wawancara dengan pemandu untuk mengetahui contoh peninggalan masyarakat masa awal yang masih banyak digunakan masyarakat Taiwan hingga saat ini</p>
+    <p>Banyak peninggalan artefak Tiongkok yang bisa berharga besar berada di museum ini. Museum ini adalah museum no.1 yang menyimpan banyak artefak atau sumber utama untuk menyimpan artefak Tiongkok. Giok-giok ini juga berasal dari Chiang Kai Shek yg dibawa, ditemukan di tempat berbagai dinasti.</p>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Include AOS JS -->
+  <script>
+    AOS.init(); // Initialize AOS
+  </script>
+</body>
+</html>

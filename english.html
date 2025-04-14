@@ -13,41 +13,32 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #dff6ff, #b4e0f2);
-      animation: oceanFade 2s ease-in;
+      font-family: 'Georgia', serif;
+      background: #f4f1ee;
+      color: #1a1a1a;
       overflow-x: hidden;
     }
 
-    @keyframes oceanFade {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
     header {
-      background: rgba(173, 216, 230, 0.75);
+      background: #e6e2dd;
       padding: 20px 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #ccc;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     header a {
-      color: #167ba0;
+      color: #2b2b2b;
       text-decoration: none;
       margin: 0 18px;
       font-size: 18px;
       font-weight: bold;
       position: relative;
       display: inline-block;
+      letter-spacing: 0.5px;
     }
 
     header a::after {
@@ -56,12 +47,11 @@
       bottom: -5px;
       left: 0;
       width: 100%;
-      height: 3px;
-      background: #45b4d0;
-      border-radius: 5px;
+      height: 2px;
+      background: #000;
       transform: scaleX(0);
       transform-origin: right;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
     header a:hover::after {
@@ -69,17 +59,27 @@
       transform-origin: left;
     }
 
-    header a:hover {
-      color: #117ca8;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      font-size: 48px;
+      font-family: 'Times New Roman', Times, serif;
+      letter-spacing: 2px;
+      color: #111;
+      padding-bottom: 10px;
+      animation: fadeInTitle 1.5s ease;
     }
 
-    h1 {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 42px;
-      color: #0b5173;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-      animation: float 4s ease-in-out infinite;
+    @keyframes fadeInTitle {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .image-wrapper {
@@ -88,31 +88,38 @@
       align-items: center;
       margin: 40px auto;
       padding: 30px 20px;
+      border-top: 1px dashed #aaa;
+      border-bottom: 1px dashed #aaa;
+      max-width: 900px;
     }
 
     .homeimg {
-      max-width: 90%;
+      max-width: 100%;
       height: auto;
       border-radius: 30px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-      transform: translateZ(0);
-      animation: float 5s ease-in-out infinite;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .homeimg:hover {
-      transform: scale(1.04);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 30px;
+        font-size: 34px;
       }
 
       header a {
         margin: 10px 10px;
         font-size: 16px;
+      }
+
+      .image-wrapper {
+        padding: 20px 10px;
+        flex-direction: column;
       }
     }
   </style>
@@ -128,13 +135,13 @@
     <a href="mandarin.html">Mandarin</a>
   </header>
 
-  <h1>BAHASA INDONESIA</h1>
+  <h1>ENGLISH</h1>
 
   <div class="image-wrapper">
-    <img src="1.png" alt="Bahasa Indonesia Image" class="homeimg" />
+    <img src="1 copy.png" alt="Bahasa Indonesia Image" class="homeimg" />
   </div>
   <div class="image-wrapper">
-    <img src="2.png" alt="Bahasa Indonesia Image" class="homeimg" />
+    <img src="2 copy.png" alt="Bahasa Indonesia Image" class="homeimg" />
   </div>
 </body>
 </html>

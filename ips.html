@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPS</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffd6d6, #ff9797);
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatUpDown {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    header {
+      background-color: rgba(255, 180, 180, 0.8);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    header a {
+      color: #c92a2a;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    header a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff0d3;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+    header a:hover {
+      color: #fff0d3;
+    }
+
+    header a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 40px;
+      color: #c92a2a;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      animation: floatUpDown 4s ease-in-out infinite;
+    }
+
+    .curved-box {
+      background-color: #ffe6e6;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 850px;
+      margin: 40px auto;
+      color: #6e1b1b;
+      font-size: 17px;
+      line-height: 1.7;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      animation: floatUpDown 5s ease-in-out infinite;
+    }
+
+    .image-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .curved-img {
+      border-radius: 25px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: floatUpDown 5s ease-in-out infinite;
+    }
+
+    .curved-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    strong {
+      color: #a40000;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .curved-box {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      .image-group {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="agama.html">Agama</a>
+    <a href="pendidikanpancasila.html">Pendidikan Pancasila</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="english.html">English</a>
+    <a href="ips.html">IPS</a>
+    <a href="mandarin.html">Mandarin</a>
+  </header>
+
+  <h1>IPS</h1>
+
+  <div class="curved-box">
+    <p><strong>Instruksi Tugas IPS</strong></p>
+    <p>1. Pilih satu artefak di National Palace Museum dan jelaskan apa yang artefak tersebut ungkapkan tentang kehidupan masyarakat pada zamannya!</p>
+    <p>Salah satu artefak di National Palace Museum adalah Jadeite Cabbage dari Dinasti Qing. Artefak ini melambangkan kesucian dan kesuburan, menunjukkan pentingnya nilai keluarga dan harapan akan banyak keturunan pada zaman itu.</p>
+    
+    <p>2. Lakukan wawancara dengan pemandu untuk mengetahui contoh peninggalan masyarakat masa awal yang masih banyak digunakan masyarakat Taiwan hingga saat ini!</p>
+    <p>Kotak yang pada zaman dulu digunakan sebagai kotak pensil raja, menjadi kotak kue bulan di zaman sekarang.</p>
+    
+    <p>3. Lakukan investigasi di Chisingtan Scenic Area, Hualien, untuk mengetahui mengenai riwayat penduduk dalam berdagang dan memenuhi kebutuhan mereka!</p>
+    <p>Penduduk di sekitar Chisingtan dulu hidup dari perikanan, bertani, dan berdagang hasil laut. Daerah ini dulunya adalah pelabuhan kecil di mana nelayan menjual hasil tangkapan ke pasar lokal. Sekarang, wilayah ini menjadi tujuan wisata, tapi sejarah perdagangan lautnya masih dikenang melalui museum dan cerita masyarakat lokal.</p>
+
+    <div class="image-group">
+      <img src="chisingtan.jpg" width="150" height="250" alt="Gambar" class="curved-img">
+      <img src="chisingtan2.jpg" width="500" height="300" alt="Gambar" class="curved-img">
+    </div>
+
+    <p>4. Berfotolah bersama kelompok dan gunakan latar belakang aktivitas wisatawan di Keelung Night Market!</p>
+    
+    <div class="image-group">
+      <img src="image.png" width="300" height="200" alt="Gambar" class="curved-img">
+      <img src="WhatsApp Image 2025-04-02 at 18.32.22_b9cfb4fd.jpg" width="300" height="200" alt="Gambar" class="curved-img">
+    </div>
+
+    <p>5. Wawancara dengan salah satu wisatawan domestik atau melalui pemandu tentang tradisi yang masih nampak di sepanjang destinasi tersebut!</p>
+    <p>Budaya seperti pertunjukan barongsai saat perayaan, penghormatan kepada para pendahulu, dan pemakaian lampion masih mudah ditemukan di berbagai tempat wisata. Wisatawan lokal juga sangat tertarik dengan riwayat kuil kuno yang masih dimanfaatkan untuk upacara dan perayaan keagamaan.</p>
+
+    <p>6. Jadilah bagian dari masyarakat di beberapa destinasi dengan meluangkan waktu meluangkan wawancara serta melakukan observasi untuk mencari informasi berikut:</p>
+    <p>- Kondisi Sebagian Besar Bangunan:</p>
+    <p>Hualien berada di daerah yang sering terjadi gempa. Tahun lalu di bulan April tahun 2024 terjadi gempa besar yang menyebabkan kerusakan kepada bangunan-bangunan di Kota Hualien bahkan beberapa bangunan runtuh.</p>
+    
+    <p>- Cara Masyarakat Merawat Masa Lalu:</p>
+    <p>Mereka memiliki museum National Palace Museum untuk menyimpan dan merawat benda-benda peninggalan sejarah.</p>
+    
+    <p>- Tata Kota Area Destinasi:</p>
+    <p>Kota Hualien adalah pusat utama di wilayah ini, terletak di pesisir Timur Taiwan yang ditengah pegunungan dan Samudra Pasifik.</p>
+    
+    <p>- Interaksi Antar-Generasi:</p>
+    <p>Di Taiwan, hubungan antar anggota keluarga dari generasi berbeda (kakek-nenek, orang tua, anak) di Hualien cukup erat.</p>
+    
+    <p>- Kepercayaan / Keyakinan Masyarakat:</p>
+    <p>Kehidupan beragama di Hualien sangat beragam. Mayoritas penduduknya menganut Taoisme, Buddhisme, dan keyakinan adat Tionghoa. Kemudian, ada juga komunitas Kristen dan Katolik.</p>
+  </div>
+</body>
+</html>
